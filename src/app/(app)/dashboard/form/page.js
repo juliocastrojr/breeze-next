@@ -91,7 +91,7 @@ export default function FormTask() {
                                         id="taskUrl"
                                         name="taskUrl"
                                         type="text"
-                                        value={tarefa.taskUrl}
+                                        value={tarefa?.taskUrl}
                                         onChange={handleChange}
                                         className="w-96" 
                                     />
@@ -116,7 +116,7 @@ export default function FormTask() {
                                         className="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
                                             <option value="">Selecione o status</option>
                                             {Object.keys(status).map((statusID) => (
-                                                <option value={status[statusID].id}>{status[statusID].status}</option>
+                                                <option key={status[statusID].id} value={status[statusID].id}>{status[statusID].status}</option>
                                             ))}
                                         </select>
                                     </div>
